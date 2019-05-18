@@ -1,29 +1,41 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+
+    <Logo/>
+
+    <NerTextBox/>
+
   </div>
+
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+  import NerTextBox from './components/NerTextBox.vue'
+  import Logo from './components/Logo.vue'
+
+export default {
+  name: 'App',
+  components: {
+    NerTextBox,
+    Logo
+  },
+  data () {
+    return {
     }
   }
+}
+</script>
+<style>
+  #app {
+  color: var(--black);
+  background: url(https://source.unsplash.com/RPT3AjdXlZc);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Montserrat', Arial, serif;
+  filter: var(--filter);
 }
 </style>
