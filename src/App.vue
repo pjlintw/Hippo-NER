@@ -4,16 +4,16 @@
     <v-toolbar app dark>
       <v-toolbar-side-icon class=""></v-toolbar-side-icon>
       <v-toolbar-title class="headline ma-0">
-        <v-btn flat v-bind:href="eddie_github_url" target="_blank">
+        <v-btn flat v-bind:href="google" target="_blank">
           <span>Hippo NER Tagger</span>
         </v-btn>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-tooltip id="eddie" class="mr-2" bottom>
           <template v-slot:activator="{ on }">
-          <v-btn icon href="https://github.com/EddieChuang" target="_blank" v-on="on">
+          <v-btn icon v-bind:href="eddie_github_url" target="_blank" v-on="on">
             <v-avatar size="45">
-              <img src="https://randomuser.me/api/portraits/men/1.jpg">
+              <img src="@/assets/eddiehuang.png">
             </v-avatar>
           </v-btn>
           </template>
@@ -24,14 +24,13 @@
                 <template v-slot:activator="{ on }">
               <v-btn icon href="https://github.com/pjlintw" target="_blank" v-on="on">
                 <v-avatar size="45">
-                  <img src="https://randomuser.me/api/portraits/men/1.jpg">
+                  <img src="@/assets/linuslin.png">
                 </v-avatar>
               </v-btn>
               </template>
               <span>Linus Lin</span>
           </v-tooltip>
     </v-toolbar>
-
 
     <v-content>
         <Home/>
@@ -53,7 +52,10 @@ export default {
   },
   data () {
     return {
-      eddie_github_url: "https://github.com/EddieChuang/Neural-Architectures-for-Named-Entity-Recognition",
+      google: 'https://www.google.com/',
+      eddie_github_url: "https://github.com/EddieChuang",
+      eddie_avatar: '@/assets/eddiehuang.png',
+      linus_avatar: '@/assets/linuslin.png',
       url_arr: ['https://images.unsplash.com/photo-1526080676457-4544bf0ebba9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9',
       'https://picsum.photos/1920/1080?image=33',
       'https://source.unsplash.com/random/1800x1080'

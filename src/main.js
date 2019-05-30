@@ -30,6 +30,11 @@ Vue.component('loc', {
   template: "<v-chip color='teal' text-color='white'>{{ word }}</v-chip>"
 });
 
+Vue.component('org', {
+  props: ['word'],
+  template: "<v-chip color='orange' text-color='white'>{{ word }}</v-chip>"
+});
+
 Vue.component('misc', {
   props: ['word'],
   template: "<v-chip color='primary' text-color='white'>{{ word }}</v-chip>"
